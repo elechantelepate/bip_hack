@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+    
+    <TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1.0"
+	    android:stretchColumns="0,1"
+	    android:padding="5dp"
+	    android:background="#000000"
+	    android:id="@+id/maintable" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#cccccc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/tu_tarjeta_bip" />
+        </TableRow>
+        
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="@string/numero_uuid" />
+            
+            <TextView
+                android:id="@+id/tvNumeroUUID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="right" />
+        </TableRow>
+        
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="@string/numero_bip" />
+            
+            <TextView
+                android:id="@+id/tvNumeroBIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="right" />
+        </TableRow>
+        
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="@string/saldo_bip" />
+            
+            <TextView
+                android:id="@+id/tvSaldoBIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="right"
+                android:textStyle="bold" />
+        </TableRow>
+	</TableLayout>
+    
+    <LinearLayout 
+        android:gravity="center" 
+        android:paddingTop="5dp" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:background="#cccccc">
+        
+        <Button 
+            android:text="@string/cargar_saldo" 
+            android:id="@+id/btnCargarSaldo" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/diezmil"
+            android:onClick="onCargarSaldo" />
+        
+        <Button 
+            android:text="@string/cambiar_numero" 
+            android:id="@+id/btnCambiarNumero" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bip"
+            android:onClick="onCambiarNumero" />
+    </LinearLayout>
+</LinearLayout>
